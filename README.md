@@ -104,16 +104,31 @@ We looked through the data and tried to find any type of patterns that would dif
 ## Preprocessing the Data
 Several conventions exist for preprocessing text data, such as formatting the text data to be all lower-case without punctuation, emoticons, or special characters—unless the presence of these characteristics are found to be relevant to the classification of spam. It is also beneficial to strip the data of stop words which are incredibly common or considered insignificant in this context. Some common stop words are “the”, “in”, “and”, “what” and other words which appear commonly or don’t hold particular association with the categories that we aim to classify our data phrases into. Checking for null values and length of the message are some of the other things that have been done. Additionally, punctuation is removed and all alphabets are in lowercase. This is done to establish a common base to check and compare the strings.
 
+## First Model
+The dataset we have has all its data in words. The main challenge is to get numerical metrics through which we can create models and make predictions. We used the tf-idf vectorizer for the first model. Tf stands for term frequency. It calculates the number of times a term repeats in a document. Idf stands for inverse document frequency. This measures how common or rare the word is across other documents. Tf-idf is a product of both of these. The higher the Tf-idf term the more relevant the word. We split the data into training and testing data using a 80:20 ratio, and used SVM with a Linear Kernel to train the data.  SVM was selected as it works effectively when there is clear separation of classes. We are using a dataset which is labeled and thus there is clear separation and no noise present. Linear kernel was used because the data is linearly separable i.e can be separated using a single line. We evaluated the model’s performance using a confusion matrix and mean square error of the training and test set.
+
+## Second Model
+When using Naïve Bayes classification for NLP, often Multinomial Naïve Bayes is used for predicting the tag or class of a text based on word frequencies. This model also required the use of word vectorization to obtain numerical representations for the word frequencies. The Bayesian model classified ham messages very accurately but largely mischaracterized the spam messages, while the goal of the project is to accurately differentiate ham and spam. This model was not optimal for the goal of the project. A potential reason is that the large volume of ham messages compared to spam messages in the dataset did not allow the second model to adequately train on spam messages.
+
 
 ## Project status
-In development. Finished with major preprocessing of data and trained first model. 
+Complete.
 
+# Conclusion
+The dataset we used has a sample bias as there are more ham labeled than spam labeled entries. This is introducing an error of at least 0.02% in our model. It may seem like a small amount but in reality it isn't. Depending on where our model is applied there could be an incorrect classification. These models should only be applied based on matching context otherwise it may lead to silencing of marginalized voices.
 
-## Credits
-| Authors               |
-| ----------------------| 
-| Atharav Ganesh Samant |
-| Brinda Puri           |
-| Caroline Hopkins      |
-| Naomi Prem Lim        |
-| Vinh Tran             |
+# Credits
+| Name                 		| Contribution                                                |
+| ------------------------- | ------------------------------------------------------------|
+| Atharav Ganesh Samant 	| Checking for null values as part of data exploitation. 	  |
+| Brinda Puri           	| Data clean up. Setting labels and encoding. Plotting data   |
+|				            | representation of data on bar and pie plot. Created         |
+|				            | and evaluated the model 1. 					              |
+| Caroline Hopkins      	| Exploring lengths of data and comparing spam and 	          |
+|                           | Preprocessing data to remove punctuation and stop           | 
+|				            | words. Created and evaluated the model 2. 			      |
+| Naomi Prem Lim        	| Checking a particular substring in preprocessed data and    |      
+|				            | finding the percentage that is spam or ham		          |
+| Vinh Tran             	| Plotting frequency of most common words from preprocessed   |
+|                           | data and comparing spam and ham. Fitted model 1 and         |
+|                           | calculated errors.                                          |
