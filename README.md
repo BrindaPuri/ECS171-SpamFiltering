@@ -2,7 +2,7 @@
 ECS 171 Machine Learning final project.
 
 # Introduction
-Our goal is to classify messages from the [SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset) as “ham” or “spam” through natural language processing and classification. By preprocessing and analyzing the text data, we hope to identify common indicators of malicious messages to then train a classifier on. 
+Our goal is to classify messages from the [SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset) as “ham” or “spam” through natural language processing and classification. We chose spam messages as a topic as this is a problem that has gotten worse exponentially in the past few years. By preprocessing and analyzing the text data, we hope to identify common indicators of malicious messages to then train a classifier on, which can hopefully be used to filter out spam messages from a user's phone in the future.
 Jupyter notebook viewable [here](https://colab.research.google.com/drive/14M0wI-DdfOWu4kVmE7BmxnN31tI02_9R) on Google Colab. 
 
 # Methods
