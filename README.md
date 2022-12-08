@@ -125,7 +125,7 @@ Here is the confusion matrix for our second model.
 Complete.
 
 # Conclusion
-The dataset we used has a sample bias as there are more ham labeled than spam labeled entries. This is introducing an error of at least 0.02% in our model. It may seem like a small amount but in reality it isn't. Depending on where our model is applied there could be an incorrect classification. These models should only be applied based on matching context otherwise it may lead to silencing of marginalized voices.
+The dataset we used has a sample bias as there are more ham labeled than spam labeled entries. This is introducing an error of at least 0.02% in our model. It may seem like a small amount but in reality it isn't. Depending on where our model is applied there could be an incorrect classification. These models should only be applied based on matching context otherwise it may lead to silencing of marginalized voices. Future plans regarding this dataset could include making a filter that pre-emptively deletes messages classified as spam on our phones. Spam messages could also lead to scam messages, and this could be useful in preventing people from getting scammed in the future which evidently has greater repercussions.
 
 # Credits
 | Name                 		| Contribution                                                |
