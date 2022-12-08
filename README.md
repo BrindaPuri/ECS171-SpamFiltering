@@ -131,14 +131,14 @@ The dataset we used has a sample bias as there are more ham labeled than spam la
 | Name                 		| Contribution                                                |
 | ------------------------- | ------------------------------------------------------------|
 | Atharav Ganesh Samant 	| Checking for null values as part of data exploitation. 	  |
-| Brinda Puri           	| Data clean up. Setting labels and encoding. Plotting data   |
-|				            | representation of data on bar and pie plot. Created         |
-|				            | and evaluated the model 1. 					              |
-| Caroline Hopkins      	| Exploring lengths of data and comparing spam and 	          |
-|                           | Preprocessing data to remove punctuation and stop           | 
-|				            | words. Created and evaluated the model 2. 			      |
-| Naomi Prem Lim        	| Checking a particular substring in preprocessed data and    |      
-|				            | finding the percentage that is spam or ham		          |
-| Vinh Tran             	| Plotting frequency of most common words from preprocessed   |
-|                           | data and comparing spam and ham. Fitted model 1 and         |
-|                           | calculated errors.                                          |
+| Brinda Puri           	| Data clean up. Setting labels and encoding.   |
+|				            | Plotting data representation of data on bar and pie plot.        |
+|				            |Created and evaluated the model 1. 					              |
+| Caroline Hopkins      	| Exploring lengths of data and comparing spam and ham.         |
+|                           | Preprocessing data to remove punctuation and stop words.    | 
+|				            | Created and evaluated the model 2. 			      |
+| Naomi Prem Lim        	| Processed data and displayed statistics for how frequently a particular substring appears as spam or ham. |      
+|                    | Evaluated model 1 and displayed accuracy reports.                         |
+| Vinh Tran             	| Plotting frequency of most common words from preprocessed data and comparing spam and ham. |
+|                           |  Fitted model 1 and calculated errors.         |
+
