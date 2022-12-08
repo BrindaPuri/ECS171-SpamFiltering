@@ -83,6 +83,8 @@ test_pred=model.predict(test_vectors)
 train_pred =model.predict(train_vectors)
 ```
 
+![TF-IDF document 1](https://github.com/BrindaPuri/ECS171-SpamFiltering/blob/main/Figures/corpus_tf-idf_1.png?raw=true)
+![TF-IDF document 2](https://github.com/BrindaPuri/ECS171-SpamFiltering/blob/main/Figures/corpus_tf-idf_2.png?raw=true)
 
 
 ## Second Model
@@ -94,7 +96,6 @@ model_2 = MultinomialNB().fit(train_vectors, y_train)
 test_pred = model_2.predict(test_vectors)
 train_pred = model_2.predict(train_vectors)
 ```
-![TF-IDF documents](https://github.com/BrindaPuri/ECS171-SpamFiltering/blob/main/Figures/corpus_tf-idf_2.png?raw=true)
 
 # Results
 Using Naive Bayes, the model classified ham messages very well, but performed poorly classifying spam messages. Many spam messages were incorrectly labeled as ham, making the first model much preferable for effectively flagging spam messages. One of the factors of this could be because the dataset has more ham messages than spam thus the model is more effectively trained to recognize ham. 
@@ -111,9 +112,14 @@ The dataset we have has all its data in words. The main challenge is to get nume
 
 ![alt text](https://github.com/BrindaPuri/ECS171-SpamFiltering/blob/main/Figures/linear-svm.png?raw=true)
 
+Here is the confusion matrix for our first model.
+![SVM confusion matrix](https://github.com/BrindaPuri/ECS171-SpamFiltering/blob/main/Figures/svm.png?raw=true)
+
 ## Second Model
 When using Naïve Bayes classification for NLP, often Multinomial Naïve Bayes is used for predicting the tag or class of a text based on word frequencies. This model also required the use of word vectorization to obtain numerical representations for the word frequencies. The Bayesian model classified ham messages very accurately but largely mischaracterized the spam messages, while the goal of the project is to accurately differentiate ham and spam. This model was not optimal for the goal of the project. A potential reason is that the large volume of ham messages compared to spam messages in the dataset did not allow the second model to adequately train on spam messages.
 
+Here is the confusion matrix for our second model.
+![Bayes confusion matrix](https://github.com/BrindaPuri/ECS171-SpamFiltering/blob/main/Figures/bayes.png?raw=true)
 
 ## Project status
 Complete.
