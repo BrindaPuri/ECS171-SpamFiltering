@@ -83,6 +83,8 @@ test_pred=model.predict(test_vectors)
 train_pred =model.predict(train_vectors)
 ```
 
+
+
 ## Second Model
 Next, we used a multinomial Bayesian classifier. This model also used the TF-IDF vectorized data and the name training and testing sets. The Bayesian model was also evaluated by a confusion matrix and mean squared error.
 ```
@@ -92,7 +94,7 @@ model_2 = MultinomialNB().fit(train_vectors, y_train)
 test_pred = model_2.predict(test_vectors)
 train_pred = model_2.predict(train_vectors)
 ```
-
+![TF-IDF documents](https://github.com/BrindaPuri/ECS171-SpamFiltering/blob/main/Figures/corpus_tf-idf_2.png?raw=true)
 
 # Results
 Using Naive Bayes, the model classified ham messages very well, but performed poorly classifying spam messages. Many spam messages were incorrectly labeled as ham, making the first model much preferable for effectively flagging spam messages. One of the factors of this could be because the dataset has more ham messages than spam thus the model is more effectively trained to recognize ham. 
